@@ -37,22 +37,22 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    '@nuxtjs/i18n',
+    '@vueuse/motion/nuxt',
+    '@vueuse/nuxt',
   ],
 
-  i18n: {
-    locales: [
-      {
-        code: 'val',
-        file: 'val.js'
-      },
-      {
-        code: 'cas',
-        file: 'cas.js'
-      },
-    ],
-    lazy: true,
-    langDir: 'locales',
-    defaultLocale: 'val'
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @import '@compromis/blobby/scss/variables';
+            @import 'bootstrap/scss/functions';
+            @import 'bootstrap/scss/variables';
+            @import 'bootstrap/scss/mixins';
+          `
+        }
+      }
+    }
   },
 })
