@@ -18,4 +18,8 @@ import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
 .nav-logo-append {
   margin-left: 1rem;
 }
+
+.nav-padding {
+  display: none;
+}
 </style>

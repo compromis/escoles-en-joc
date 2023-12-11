@@ -217,7 +217,7 @@ function randomize(array) {
   }
 
   .text {
-    font-size: $text-2xl;
+    font-size: var(--text-md);
     letter-spacing: -.025em;
     line-height: 1.4;
   }
