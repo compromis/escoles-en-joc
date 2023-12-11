@@ -33,7 +33,8 @@ export default defineNuxtConfig({
   },
 
   css: [
-    '@compromis/blobby/scss/blobby.scss'
+    '@compromis/blobby/scss/blobby.scss',
+    '~/assets/scss/main.scss'
   ],
 
   modules: [

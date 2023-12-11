@@ -9,14 +9,13 @@ import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
       <BNavItem to="/">Castellano</BNavItem>
       <template #logo-append>Escoles en joc</template>
     </BNav>
+
     <slot />
   </div>
 </template>
 
 <style lang="scss">
-body,
-html {
-  background: var(--gray-1000);
-  color: var(--white);
+.nav-logo-append {
+  margin-left: 1rem;
 }
 </style>

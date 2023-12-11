@@ -66,10 +66,12 @@ onMounted(() => {
       end: 'top bottom',
     }
   })
+
   handleTimeline.to(handle.value, {
     '--handle-height': '50%',
     duration: .5
   })
+
   handleTimeline.to(handle.value, {
     '--handle-height': '70%',
     duration: .5
@@ -84,6 +86,18 @@ onMounted(() => {
     delay: 1,
     duration: .5,
     ease: 'power4.out',
+    scrollTrigger: {
+      trigger: slotMachine.value,
+      start: 'top center',
+      end: 'top bottom',
+    }
+  })
+
+  $gsap.to(slotMachine.value, {
+    y: 50,
+    yoyo: true,
+    repeat: 1,
+    duration: .25,
     scrollTrigger: {
       trigger: slotMachine.value,
       start: 'top center',
@@ -105,6 +119,13 @@ function pull () {
     ease: "bounce.out",
     onComplete: spin,
   })
+
+  $gsap.to(slotMachine.value, {
+    y: 50,
+    yoyo: true,
+    repeat: 1,
+    duration: .25
+  })
 }
 
 function randomize(array) {
@@ -113,6 +134,7 @@ function randomize(array) {
 </script>
 
 <template>
+  <section class="slot-machine-wrapper">
     <div class="slot-machine" :id="id" ref="slotMachine">
       <div class="reels">
         <div v-for="(letter, i) in prize" :key="i" class="door">
@@ -140,6 +162,7 @@ function randomize(array) {
         <div class="handle" ref="handle" />
       </button>
     </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -165,6 +188,7 @@ function randomize(array) {
     display: flex;
     flex-direction: column;
     transform: translateY(-3.75%);
+    user-select: none;
 
     span {
       display: flex;

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="intro-text">
+    <div class="text intro-text">
       <p>
         El govern de Mazón vol que se puguen tornar a donar llicències a les cases d’apostes que es troben al costat dels centres educatius, tal com reclama el lobby del joc.
       </p>
@@ -25,6 +25,16 @@
         </SlotMachine>
       </div>
     </div>
+    <div class="text trailer-text">
+      <p>
+        Des de Compromís defensem que no es puguen donar ni prorrogar llicències
+        a establiments de joc a menys de 1.000 metres de centre educatius.
+      </p>
+      <p>
+        Entenem que és una mesura importantíssima per a protegir, especialment a
+        menors d’edat, d’un contacte continuat amb les cases d’apostes.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -36,17 +46,20 @@
       margin-top: 25vh;
     }
 
-    .slot-machine {
+    .slot-machine-wrapper {
       position: sticky;
       top: 50vh;
       transform: translateY(-50%);
     }
   }
 
-  .intro-text {
+  .text {
     font-size: 2rem;
     letter-spacing: -.025em;
     line-height: 1.5;
+  }
+
+  .intro-text {
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -55,5 +68,11 @@
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 20vh;
+  }
+
+  .trailer-text {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: -25vh;
   }
 </style>
