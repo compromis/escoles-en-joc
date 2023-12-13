@@ -56,7 +56,8 @@
   }
 
   .slot-slide {
-    height: 100vh;
+    min-height: 60vh;
+    padding: 4rem 0;
 
     &:first-child {
       margin-top: 25vh;

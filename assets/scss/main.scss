@@ -10,3 +10,13 @@ html {
   background-color: var(--gray-1000);
   color: var(--white);
 }
+
+.map-enter-active,
+.map-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.map-enter-from,
+.map-leave-to {
+  opacity: 0;
+}
