@@ -134,7 +134,7 @@ function randomize(array) {
 </script>
 
 <template>
-  <section class="slot-machine-wrapper">
+  <article class="slot-machine-wrapper">
     <div class="slot-machine" :id="id" ref="slotMachine">
       <div class="reels">
         <div v-for="(letter, i) in prize" :key="i" class="door">
@@ -162,7 +162,7 @@ function randomize(array) {
         <div class="handle" ref="handle" />
       </button>
     </div>
-  </section>
+  </article>
 </template>
 
 <style lang="scss" scoped>
@@ -174,7 +174,7 @@ function randomize(array) {
     padding: var(--padding);
     border-radius: var(--border-radius);
     max-width: 600px;
-    margin: 0 auto;
+    margin: 1rem auto;
   }
 
   .reels {
@@ -263,6 +263,12 @@ function randomize(array) {
         transform: translate(-50%, -50%);
         transition: background .25s ease;
       }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .spin-handle {
+      display: none;
     }
   }
 </style>

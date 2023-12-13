@@ -1,6 +1,7 @@
 <script setup>
 import BNav from '@compromis/blobby/components/nav/BNav.vue'
 import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
+import BFooter from '@compromis/blobby/components/footer/BFooter.vue'
 </script>
 
 <template>
@@ -11,6 +12,9 @@ import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
     </BNav>
 
     <slot />
+    <div class="container footer">
+      <BFooter variant="dark" />
+    </div>
   </div>
 </template>
 
@@ -21,5 +25,10 @@ import BNavItem from '@compromis/blobby/components/nav/BNavItem.vue'
 
 .nav-padding {
   display: none;
+}
+
+.footer {
+  color: var(--white);
+  padding: 1rem;
 }
 </style>

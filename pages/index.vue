@@ -2,21 +2,21 @@
   <main>
     <Hero />
     <div class="container">
-      <div class="text intro-text">
-        <h1>
+      <section class="text text-intro">
+        <h1 v-motion-fade-visible>
           Amb els<br>
           nostres fills<br>
           no es juga
         </h1>
-        <p>
+        <p v-motion-fade-visible>
           El govern de Mazón vol que se puguen tornar a donar llicències a les cases d’apostes que es troben al costat dels centres educatius, tal com reclama el lobby del joc.
         </p>
-        <p>
+        <p v-motion-fade-visible>
           Esta mesure suposa un pas enrere en la lluita contra la ludopatia infantil i juvenil, al normalitzar que hi hagen casinos o cases de joc a menys de 850 metres d’instituts, centres de secundària i de formació professional.
         </p>
         <p>Esta es la realitat...</p>
-      </div>
-      <div class="slot-slides">
+      </section>
+      <section class="slot-slides">
         <div class="slot-slide">
           <SlotMachine prize="40%" id="slotMachine1">
             1 de cada 4 menors juguen en cases d'aposta de forma regular segons dades del Defensor del Menor.
@@ -32,27 +32,38 @@
             El 63% dels joves menors de 25 anys ha apostat en alguna ocasió.
           </SlotMachine>
         </div>
-      </div>
-      <div class="text trailer-text">
-        <p>
-          Des de Compromís defensem que no es puguen donar ni prorrogar llicències
-          a establiments de joc a menys de 1.000 metres de centre educatius.
+      </section>
+      <section class="text text-trailer">
+        <p v-motion-fade-visible>
+          El govern de Mazón vol que se puguen tornar a posar cases d’apostes al costat
+          dels centres educatius, tal com reclama el lobby del joc.
         </p>
-        <p>
-          Entenem que és una mesura importantíssima per a protegir, especialment a
-          menors d’edat, d’un contacte continuat amb les cases d’apostes.
+        <p v-motion-fade-visible>
+          Esta mesura suposa un pas enrere en la lluita contra la ludopatia infantil i juvenil,
+          suposa normalitzar que hi hagen casinos o cases de joc a menys de 850 metres d’instituts,
+          centres de secundària i de formació professional.
         </p>
-      </div>
+      </section>
     </div>
+    <Map />
   </main>
 </template>
 
 <style lang="scss">
+  main {
+    --text-container: 850px;
+    padding: 1rem;
+  }
+
   .slot-slide {
     height: 100vh;
 
-    &:not(:first-child) {
+    &:first-child {
       margin-top: 25vh;
+    }
+
+    &:last-child {
+      margin-bottom: 25vh;
     }
 
     .slot-machine-wrapper {
@@ -66,32 +77,30 @@
     font-size: var(--text-lg);
     letter-spacing: -.03em;
     line-height: 1.3;
-  }
 
-  .intro-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-    max-width: 850px;
-    margin: 0 auto;
-    margin-bottom: 20vh;
-    padding-top: 3rem;
-    
-    h1 {
-      font-size: clamp(3.5rem, 4vw, 5rem);
-      line-height: 1;
+    &-intro {
+      max-width: var(--text-container);
+      margin: 0 auto;
+      
+      h1 {
+        font-size: var(--text-2xl);
+        line-height: 1;
+      }
+    }
+
+    &-trailer {
+      max-width: var(--text-container);
+      margin: 0 auto;
+      margin-top: -25vh;
+    }
+
+    p {
+      margin: 1em 0;
     }
   }
 
-  .trailer-text {
-    max-width: 850px;
-    margin: 0 auto;
-    margin-top: -25vh;
-  }
-
   @media (max-width: 1500px) {
-    .intro-text {
+    .text-intro {
       max-width: 600px;
       margin-left: auto;
     }
