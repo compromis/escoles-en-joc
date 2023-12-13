@@ -14,6 +14,7 @@ const props = defineProps({
 })
 
 const { $gsap } = useNuxtApp()
+const prefersReducedMotion = useState('prefersReducedMotion')
 const animation = ref(null)
 const slotMachine = ref(null)
 const handle = ref(null)
@@ -42,6 +43,21 @@ const emojis = [
   'party-popper_1f389.png',
 ]
 
+onMounted(() => {
+  if (!prefersReducedMotion.value) {
+    ImFeelingLucky()
+  }
+})
+
+watch(prefersReducedMotion, (reduced) => {
+  if (reduced && animation.value) {
+    animation.value.kill()
+    animation.value = null
+  } else if (!reduced) {
+    ImFeelingLucky()
+  }
+})
+
 const slotMachineAnimation = {
   y: '-81.5%',
   stagger: .5,
@@ -49,62 +65,64 @@ const slotMachineAnimation = {
   ease: "bounce.out"
 }
 
-onMounted(() => {
-  animation.value = $gsap.to(`#${props.id} .reel`, {
-    ...slotMachineAnimation,
-    scrollTrigger: {
-      trigger: slotMachine.value,
-      start: 'top center',
-      end: 'top bottom',
-    }
-  })
+function ImFeelingLucky () {
+  animation.value = $gsap.context(() => {
+    $gsap.to(`#${props.id} .reel`, {
+      ...slotMachineAnimation,
+      scrollTrigger: {
+        trigger: slotMachine.value,
+        start: 'top center',
+        end: 'top bottom',
+      }
+    })
 
-  const handleTimeline = $gsap.timeline({
-    scrollTrigger: {
-      trigger: slotMachine.value,
-      start: 'top center',
-      end: 'top bottom',
-    }
-  })
+    const handleTimeline = $gsap.timeline({
+      scrollTrigger: {
+        trigger: slotMachine.value,
+        start: 'top center',
+        end: 'top bottom',
+      }
+    })
 
-  handleTimeline.to(handle.value, {
-    '--handle-height': '50%',
-    duration: .5
-  })
+    handleTimeline.to(handle.value, {
+      '--handle-height': '50%',
+      duration: .5
+    })
 
-  handleTimeline.to(handle.value, {
-    '--handle-height': '70%',
-    duration: .5
-  })
+    handleTimeline.to(handle.value, {
+      '--handle-height': '70%',
+      duration: .5
+    })
 
-  $gsap.fromTo(text.value, {
-    opacity: 0,
-    y: -50
-  }, {
-    opacity: 1,
-    y: 0,
-    delay: 1,
-    duration: .5,
-    ease: 'power4.out',
-    scrollTrigger: {
-      trigger: slotMachine.value,
-      start: 'top center',
-      end: 'top bottom',
-    }
-  })
+    $gsap.fromTo(text.value, {
+      opacity: 0,
+      y: -50
+    }, {
+      opacity: 1,
+      y: 0,
+      delay: 1,
+      duration: .5,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: slotMachine.value,
+        start: 'top center',
+        end: 'top bottom',
+      }
+    })
 
-  $gsap.to(slotMachine.value, {
-    y: 50,
-    yoyo: true,
-    repeat: 1,
-    duration: .25,
-    scrollTrigger: {
-      trigger: slotMachine.value,
-      start: 'top center',
-      end: 'top bottom',
-    }
+    $gsap.to(slotMachine.value, {
+      y: 50,
+      yoyo: true,
+      repeat: 1,
+      duration: .25,
+      scrollTrigger: {
+        trigger: slotMachine.value,
+        start: 'top center',
+        end: 'top bottom',
+      }
+    })
   })
-})
+}
 
 function spin () {
   $gsap.set(`#${props.id} .reel`, { y:'-3.75%' })
@@ -134,18 +152,18 @@ function randomize(array) {
 </script>
 
 <template>
-  <article class="slot-machine-wrapper">
+  <article :class="['slot-machine-wrapper', { reduced: prefersReducedMotion }]">
     <div class="slot-machine" :id="id" ref="slotMachine">
       <div class="reels">
         <div v-for="(letter, i) in prize" :key="i" class="door">
             <div class="reel">
-              <span v-for="emoji in randomize(emojis).slice(0, -5)" :key="emoji">
+              <span v-for="(emoji, e) in randomize(emojis).slice(0, -5)" :key="i + e">
                 <ClientOnly>
                   <img :src="'https://em-content.zobj.net/source/apple/354/' + emoji" />
                 </ClientOnly>
               </span>
               <span>{{ letter }}</span>
-              <span v-for="emoji in randomize(emojis).slice(-2)" :key="emoji">
+              <span v-for="(emoji, e) in randomize(emojis).slice(-2)" :key="i + e">
                 <ClientOnly>
                   <img :src="'https://em-content.zobj.net/source/apple/354/' + emoji" />
                 </ClientOnly>
@@ -263,6 +281,17 @@ function randomize(array) {
         transform: translate(-50%, -50%);
         transition: background .25s ease;
       }
+    }
+  }
+
+  .reduced {
+    .text {
+      opacity: 1 !important;
+      transform: translate(0, 0) !important;
+    }
+
+    .reel {
+      transform: translateY(-81.5%) !important;
     }
   }
 

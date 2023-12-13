@@ -1,14 +1,47 @@
+<script setup>
+const prefersReducedMotion = useState('prefersReducedMotion')
+
+onMounted(() => {
+  if (prefersReducedMotion.value) {
+    pauseVideos()
+  }
+})
+
+watch(prefersReducedMotion, (reduced) => {
+  if (reduced) {
+    pauseVideos()
+  } else {
+    playVideos()
+  }
+})
+
+const video1 = ref(null)
+const video2 = ref(null)
+const video3 = ref(null)
+function pauseVideos() {
+  video1.value.pause()
+  video2.value.pause()
+  video3.value.pause()
+}
+
+function playVideos() {
+  video1.value.play()
+  video2.value.play()
+  video3.value.play()
+}
+</script>
+
 <template>
   <header>
     <div class="videos">
       <div class="video video-1">
-        <video src="/videos/cctv3.mp4" muted autoplay loop />
+        <video src="/videos/cctv3.mp4" muted autoplay loop ref="video1" />
       </div>
       <div class="video video-2">
-        <video src="/videos/cctv1.mp4" muted autoplay loop />
+        <video src="/videos/cctv1.mp4" muted autoplay loop ref="video2" />
       </div>
       <div class="video video-3 d-none d-md-block">
-        <video src="/videos/cctv2.mp4" muted autoplay loop />
+        <video src="/videos/cctv2.mp4" muted autoplay loop ref="video3" />
       </div>
     </div>
   </header>
