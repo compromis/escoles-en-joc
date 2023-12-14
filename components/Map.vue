@@ -81,4 +81,23 @@ const city = ref('vlc')
       display: block;
     }
   }
+
+  @include media-breakpoint-down(md) {
+    .map {
+      padding: 0;
+    }
+
+    .cities {
+      flex-wrap: nowrap;
+      overflow: auto;
+      margin: 1rem -1rem;
+      padding: 0 1rem;
+    }
+  }
+
+  @media (max-aspect-ratio: 3 / 4) {
+    .map-embed {
+      aspect-ratio: 3 / 4;
+    }
+  }
 </style>

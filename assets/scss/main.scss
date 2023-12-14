@@ -1,3 +1,8 @@
+@import '@compromis/blobby/scss/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
 :root {
   --text-sm: 1.25rem;
   --text-md: clamp(1.5rem, 1.25vw, 1.75rem);
@@ -15,25 +20,6 @@ html {
 main {
   --text-container: 850px;
   padding: 1rem;
-}
-
-.slot-slide {
-  min-height: 60vh;
-  padding: 4rem 0;
-
-  &:first-child {
-    margin-top: 25vh;
-  }
-
-  &:last-child {
-    margin-bottom: 25vh;
-  }
-
-  .slot-machine-wrapper {
-    position: sticky;
-    top: 50vh;
-    transform: translateY(-50%);
-  }
 }
 
 .text {
@@ -54,7 +40,6 @@ main {
   &-trailer {
     max-width: var(--text-container);
     margin: 0 auto;
-    margin-top: -25vh;
   }
 
   p {
@@ -62,9 +47,43 @@ main {
   }
 }
 
+.container {
+  padding: 0;
+}
+
+.slot-slide {
+  margin: 10vh 0;
+}
+
 @media (max-width: 1500px) {
   .text-intro {
     max-width: 600px;
     margin-left: auto;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .slot-slide {
+    min-height: 60vh;
+    padding: 4rem 0;
+    margin: 0;
+  
+    &:first-child {
+      margin-top: 25vh;
+    }
+  
+    &:last-child {
+      margin-bottom: 25vh;
+    }
+  
+    .slot-machine-wrapper {
+      position: sticky;
+      top: 50vh;
+      transform: translateY(-50%);
+    }
+  }
+
+  .text-trailer {
+    margin-top: -25vh;
   }
 }

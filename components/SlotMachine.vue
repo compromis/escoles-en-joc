@@ -296,6 +296,16 @@ function randomize(array) {
   }
 
   @include media-breakpoint-down(md) {
+    .slot-machine {
+      --padding: 1.5rem;
+
+      &-wrapper {
+        position: static;
+        top: 0;
+        transform: translateY(0);
+      }
+    }
+
     .spin-handle {
       display: none;
     }

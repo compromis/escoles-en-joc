@@ -77,6 +77,12 @@ function playVideos() {
     grid-template-columns: 1fr;
     margin-top: -8rem;
     margin-bottom: 1rem;
+    padding: .5rem;
+    gap: 1.5rem;
+  }
+  
+  .video video {
+    border-radius: 1rem;
   }
 }
 </style>
