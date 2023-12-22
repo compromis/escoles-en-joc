@@ -1,3 +1,20 @@
+<script setup lang="ts">
+useHead({
+  htmlAttrs: {
+    lang: 'ca',
+  },
+})
+
+useSeoMeta({
+  title: 'Escoles en joc - Amb els nostres fills no es juga - Compromís',
+  ogTitle: 'Escoles en joc - Amb els nostres fills no es juga - Compromís',
+  description: 'El govern de Mazón vol que se puguen tornar a donar llicències a les cases d’apostes que es troben al costat dels centres educatius.',
+  ogDescription: 'El govern de Mazón vol que se puguen tornar a donar llicències a les cases d’apostes que es troben al costat dels centres educatius.',
+  ogImage: 'https://escolesenjoc.compromis.net/images/ogimage.png',
+  twitterCard: 'summary_large_image',
+})
+</script>
+
 <template>
   <main>
     <Hero />
@@ -17,7 +34,7 @@
         <p v-motion-fade-visible>
           Esta mesure suposa un pas enrere en la lluita contra la ludopatia infantil i juvenil, al normalitzar que hi hagen casinos o cases de joc a menys de 850 metres d’instituts, centres de secundària i de formació professional.
         </p>
-        <p>Esta es la realitat...</p>
+        <p>Esta es la realitat en dades:</p>
       </section>
       <section class="slot-slides">
         <div class="slot-slide">
@@ -50,7 +67,7 @@
     </div>
     <Map>
       <template #title>
-        Mapa de...
+        Mapa de centres educatius afectats
       </template>
       <p v-motion-fade-visible>
         Gràcies al treball de Compromís en la Generalitat Valenciana es va aconseguir

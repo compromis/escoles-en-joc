@@ -2,10 +2,6 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Escoles en joc - Compromís',
-      htmlAttrs: {
-        lang: 'ca',
-      },
       link: [
         {
           rel: 'icon',

@@ -1,38 +1,55 @@
+<script setup lang="ts">
+useHead({
+  htmlAttrs: {
+    lang: 'es',
+  },
+})
+
+useSeoMeta({
+  title: 'Escuelas en juego - Con nuestros hijos no se juega - Compromís',
+  ogTitle: 'Escoles en joc - Con nuestros hijos no se juega - Compromís',
+  description: 'El gobierno de Mazón quiere que se puedan volver a dar licencias en las casas de apuestas que se encuentran junto a los centros educativos.',
+  ogDescription: 'El gobierno de Mazón quiere que se puedan volver a dar licencias en las casas de apuestas que se encuentran junto a los centros educativos.',
+  ogImage: 'https://escolesenjoc.compromis.net/images/ogimage.png',
+  twitterCard: 'summary_large_image',
+})
+</script>
+
 <template>
   <main>
     <Hero />
     <div class="container">
       <section class="text text-intro">
         <h1 v-motion-fade-visible>
-          Amb els<br>
-          nostres fills<br>
-          no es juga
+          Con nuestros<br>
+          hijos e hijas<br>
+          no se juega
         </h1>
 
         <Languages />
 
         <p v-motion-fade-visible>
-          El govern de Mazón vol que se puguen tornar a donar llicències a les cases d’apostes que es troben al costat dels centres educatius, tal com reclama el lobby del joc.
+          El gobierno de Mazón quiere que se puedan volver a dar licencias en las casas de apuestas que se encuentran junto a los centros educativos, tal y como reclama el lobi del juego.
         </p>
         <p v-motion-fade-visible>
-          Esta mesure suposa un pas enrere en la lluita contra la ludopatia infantil i juvenil, al normalitzar que hi hagen casinos o cases de joc a menys de 850 metres d’instituts, centres de secundària i de formació professional.
+          Esta medida supone un paso atrás en la lucha contra la ludopatía infantil y juvenil, al normalizar que haya casinos o casas de juego a menos de 850 metros de institutos, centros de secundaria y de formación profesional.
         </p>
-        <p>Esta es la realitat...</p>
+        <p>Esta es la realidad en datos:</p>
       </section>
       <section class="slot-slides">
         <div class="slot-slide">
           <SlotMachine prize="40%" id="slotMachine1">
-            1 de cada 4 menors juguen en cases d'aposta de forma regular segons dades del Defensor del Menor.
+            1 de cada 4 menores juegan en casas de apuesta de forma regular según datos del Defensor del Menor.
           </SlotMachine>
         </div>
         <div class="slot-slide">
           <SlotMachine prize="80%" id="slotMachine2">
-            El 80% de les persones que pateixen són menors de 30 anys.
+            El 80% de las personas que sufren son menores de 30 años.
           </SlotMachine>
         </div>
         <div class="slot-slide">
           <SlotMachine prize="63%" id="slotMachine3">
-            El 63% dels joves menors de 25 anys ha apostat en alguna ocasió.
+            El 63% de los jóvenes menores de 25 años ha apostado en alguna ocasión.
           </SlotMachine>
         </div>
       </section>
@@ -42,9 +59,8 @@
           dels centres educatius, tal com reclama el lobby del joc.
         </p>
         <p v-motion-fade-visible>
-          Esta mesura suposa un pas enrere en la lluita contra la ludopatia infantil i juvenil,
-          suposa normalitzar que hi hagen casinos o cases de joc a menys de 850 metres d’instituts,
-          centres de secundària i de formació professional.
+          El gobierno de Mazón quiere que se puedan volver a poner casas de apuestas al lado
+          de los centros educativos, tal y como reclama el lobi del juego.
         </p>
       </section>
     </div>
@@ -53,16 +69,13 @@
         Mapa de...
       </template>
       <p v-motion-fade-visible>
-        Gràcies al treball de Compromís en la Generalitat Valenciana es va aconseguir
-        allunyar les cases d'apostes dels centres educatius.
+        Gracias al trabajo de Compromís en la Generalitat Valenciana se logró alejar las casas de apuestas de los centros educativos.
       </p>
       <p v-motion-fade-visible>
-        Ara, amb esta cessió de Mazón a qui es lucra amb la ludopatia, els nostres
-        xiquets i xiquetes podran tindre davant de l'eixida de classe estos establiments,
-        amb el perill que suposa per a este tipus d'adiccions.
+        Ahora, con esta cesión de Mazón a la que se lucra con la ludopatía, nuestros niños y niñas podrán tener ante la salida de clase estos establecimientos, con el peligro que supone para este tipo de adicciones.
       </p>
       <p v-motion-fade-visible>
-        En este mapa podeu veure com està la situació:
+        En este mapa puede ver cómo está la situación:
       </p>
     </Map>
   </main>
