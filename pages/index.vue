@@ -32,7 +32,7 @@ useSeoMeta({
           El govern de Mazón vol que se puguen tornar a donar llicències a les cases d’apostes que es troben al costat dels centres educatius, tal com reclama el lobby del joc.
         </p>
         <p v-motion-fade-visible>
-          Esta mesure suposa un pas enrere en la lluita contra la ludopatia infantil i juvenil, al normalitzar que hi hagen casinos o cases de joc a menys de 850 metres d’instituts, centres de secundària i de formació professional.
+          Esta mesure suposa un pas enrere en la lluita contra la ludopatia infantil i juvenil al normalitzar que hi hagen casinos o cases de joc a menys de 850 metres d’instituts, centres de secundària i de formació professional.
         </p>
         <p>Esta es la realitat en dades:</p>
       </section>
@@ -53,24 +53,13 @@ useSeoMeta({
           </SlotMachine>
         </div>
       </section>
-      <section class="text text-trailer">
-        <p v-motion-fade-visible>
-          El govern de Mazón vol que se puguen tornar a posar cases d’apostes al costat
-          dels centres educatius, tal com reclama el lobby del joc.
-        </p>
-        <p v-motion-fade-visible>
-          Esta mesura suposa un pas enrere en la lluita contra la ludopatia infantil i juvenil,
-          suposa normalitzar que hi hagen casinos o cases de joc a menys de 850 metres d’instituts,
-          centres de secundària i de formació professional.
-        </p>
-      </section>
     </div>
     <Map>
       <template #title>
         Mapa de centres educatius afectats
       </template>
       <p v-motion-fade-visible>
-        Gràcies al treball de Compromís en la Generalitat Valenciana es va aconseguir
+        Gràcies al treball de Compromís en la Generalitat Valenciana, es va aconseguir
         allunyar les cases d'apostes dels centres educatius.
       </p>
       <p v-motion-fade-visible>

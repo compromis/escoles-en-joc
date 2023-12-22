@@ -7,10 +7,10 @@ useHead({
 
 useSeoMeta({
   title: 'Escuelas en juego - Con nuestros hijos no se juega - Compromís',
-  ogTitle: 'Escoles en joc - Con nuestros hijos no se juega - Compromís',
+  ogTitle: 'Escuelas en juego - Con nuestros hijos no se juega - Compromís',
   description: 'El gobierno de Mazón quiere que se puedan volver a dar licencias en las casas de apuestas que se encuentran junto a los centros educativos.',
   ogDescription: 'El gobierno de Mazón quiere que se puedan volver a dar licencias en las casas de apuestas que se encuentran junto a los centros educativos.',
-  ogImage: 'https://escolesenjoc.compromis.net/images/ogimage.png',
+  ogImage: 'https://escolesenjoc.comprosmis.net/images/ogimage.png',
   twitterCard: 'summary_large_image',
 })
 </script>
@@ -29,10 +29,10 @@ useSeoMeta({
         <Languages />
 
         <p v-motion-fade-visible>
-          El gobierno de Mazón quiere que se puedan volver a dar licencias en las casas de apuestas que se encuentran junto a los centros educativos, tal y como reclama el lobi del juego.
+          El gobierno de Mazón quiere que se puedan volver a dar licencias en las casas de apuestas que se encuentran junto a los centros educativos, tal y como reclama el lobby del juego.
         </p>
         <p v-motion-fade-visible>
-          Esta medida supone un paso atrás en la lucha contra la ludopatía infantil y juvenil, al normalizar que haya casinos o casas de juego a menos de 850 metros de institutos, centros de secundaria y de formación profesional.
+          Esta medida supone un paso atrás en la lucha contra la ludopatía infantil y juvenil al normalizar que haya casinos o casas de juego a menos de 850 metros de institutos, centros de secundaria y de formación profesional.
         </p>
         <p>Esta es la realidad en datos:</p>
       </section>
@@ -53,26 +53,16 @@ useSeoMeta({
           </SlotMachine>
         </div>
       </section>
-      <section class="text text-trailer">
-        <p v-motion-fade-visible>
-          El govern de Mazón vol que se puguen tornar a posar cases d’apostes al costat
-          dels centres educatius, tal com reclama el lobby del joc.
-        </p>
-        <p v-motion-fade-visible>
-          El gobierno de Mazón quiere que se puedan volver a poner casas de apuestas al lado
-          de los centros educativos, tal y como reclama el lobi del juego.
-        </p>
-      </section>
     </div>
     <Map>
       <template #title>
-        Mapa de...
+        Mapa de centros educativos afectados
       </template>
       <p v-motion-fade-visible>
-        Gracias al trabajo de Compromís en la Generalitat Valenciana se logró alejar las casas de apuestas de los centros educativos.
+        Gracias al trabajo de Compromís en la Generalitat Valenciana, se logró alejar las casas de apuestas de los centros educativos.
       </p>
       <p v-motion-fade-visible>
-        Ahora, con esta cesión de Mazón a la que se lucra con la ludopatía, nuestros niños y niñas podrán tener ante la salida de clase estos establecimientos, con el peligro que supone para este tipo de adicciones.
+        Ahora, con esta cesión de Mazón a la que se lucra con la ludopatía, nuestros niños y niñas podrán tener estos establecimientos en frente de la escuela al salir de clase , con el peligro que supone para este tipo de adicciones.
       </p>
       <p v-motion-fade-visible>
         En este mapa puede ver cómo está la situación:
