@@ -43,19 +43,25 @@ const city = ref('vlc')
         height="480"
         class="map-embed" />
     </div>
+    <div class="contact">
+      Ens em deixat alguna? Contacta amb nosaltres a <a href="mailto:info@compromis.net">info@compromis.net</a>
+    </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
   .map {
     padding: 1rem;
-    margin-top: 8rem;
 
     &-embed {
       width: 100%;
       height: 100%;
       aspect-ratio: 4 / 2.5;
     }
+  }
+
+  .contact {
+    padding: 1rem;
   }
 
   .text-map {

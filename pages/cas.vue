@@ -68,5 +68,9 @@ useSeoMeta({
         En este mapa puede ver cómo está la situación:
       </p>
     </Map>
+    <Share>
+      <template #title>¡Difúndelo!</template>
+      <p>Comparte esta página con tus amistades.</p>
+    </Share>
   </main>
 </template>

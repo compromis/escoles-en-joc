@@ -71,5 +71,9 @@ useSeoMeta({
         En este mapa podeu veure com està la situació:
       </p>
     </Map>
+    <Share>
+      <template #title>Fes difusió!</template>
+      <p>Comparteix aquesta pàgina amb les teues amistats.</p>
+    </Share>
   </main>
 </template>
