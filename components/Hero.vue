@@ -35,13 +35,13 @@ function playVideos() {
   <header>
     <div class="videos">
       <div class="video video-1">
-        <video src="/videos/cctv3.mp4" muted autoplay loop ref="video1" />
+        <video src="/videos/cctv3.mp4" muted autoplay loop playsinline ref="video1" />
       </div>
       <div class="video video-2">
-        <video src="/videos/cctv1.mp4" muted autoplay loop ref="video2" />
+        <video src="/videos/cctv1.mp4" muted autoplay loop playsinline ref="video2" />
       </div>
       <div class="video video-3 d-none d-md-block">
-        <video src="/videos/cctv2.mp4" muted autoplay loop ref="video3" />
+        <video src="/videos/cctv2.mp4" muted autoplay loop playsinline ref="video3" />
       </div>
     </div>
   </header>
@@ -54,6 +54,7 @@ function playVideos() {
   gap: 2rem;
   overflow: hidden;
   padding: 1rem;
+  user-select: none;
 }
 
 .video {
