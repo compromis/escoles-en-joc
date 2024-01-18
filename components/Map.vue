@@ -44,7 +44,7 @@ const city = ref('vlc')
         class="map-embed" />
     </div>
     <div class="contact">
-      Ens em deixat alguna? Contacta amb nosaltres a <a href="mailto:info@compromis.net">info@compromis.net</a>
+      Ens hem deixat alguna? Contacta amb nosaltres a <a href="mailto:info@compromis.net">info@compromis.net</a>
     </div>
   </section>
 </template>

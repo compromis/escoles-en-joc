@@ -38,7 +38,7 @@ useSeoMeta({
       </section>
       <section class="slot-slides">
         <div class="slot-slide">
-          <SlotMachine prize="40%" id="slotMachine1">
+          <SlotMachine prize="25%" id="slotMachine1">
             1 de cada 4 menors juguen en cases d'aposta de forma regular segons dades del Defensor del Menor.
           </SlotMachine>
         </div>

@@ -38,7 +38,7 @@ useSeoMeta({
       </section>
       <section class="slot-slides">
         <div class="slot-slide">
-          <SlotMachine prize="40%" id="slotMachine1">
+          <SlotMachine prize="25%" id="slotMachine1">
             1 de cada 4 menores juegan en casas de apuesta de forma regular según datos del Defensor del Menor.
           </SlotMachine>
         </div>
