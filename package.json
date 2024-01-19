@@ -21,6 +21,7 @@
     "@compromis/blobby": "^1.1.10",
     "@vueuse/motion": "^2.0.0",
     "gsap": "^3.12.3",
+    "nuxt-cloudflare-analytics": "^1.0.8",
     "sass": "^1.69.5"
   }
 }

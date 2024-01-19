@@ -36,6 +36,7 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/motion/nuxt',
     '@vueuse/nuxt',
+    'nuxt-cloudflare-analytics'
   ],
 
   vite: {
@@ -52,4 +53,8 @@ export default defineNuxtConfig({
       }
     }
   },
+
+  cloudflareAnalytics: {
+    token: '804cfa9b1fc84ba5a7caf7a6d17ab498'
+  }
 })
